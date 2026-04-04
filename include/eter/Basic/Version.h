@@ -2,14 +2,15 @@
 // Exceptions. See /LICENSE for license information.
 // SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
-#include "eter/Basic/Version.h"
+#ifndef ETER_BASIC_VERSION_H
+#define ETER_BASIC_VERSION_H
 
 #include <string>
 
 namespace eter {
 
-std::string getVersionString() {
-  return "eter 0.1.0";
-}
+std::string getVersionString();
 
 } // namespace eter
+
+#endif // ETER_BASIC_VERSION_H

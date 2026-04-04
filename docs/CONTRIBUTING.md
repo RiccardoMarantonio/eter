@@ -1,12 +1,12 @@
 <!--
-Part of the Quar Language project, under the Apache License v2.0 with LLVM
+Part of the Eter Language project, under the Apache License v2.0 with LLVM
 Exceptions. See /LICENSE for license information.
 SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 -->
 
-# Contributing to Quar
+# Contributing to Eter
 
-Thank you for your interest in contributing to Quar. Contributions of code,
+Thank you for your interest in contributing to Eter. Contributions of code,
 documentation, tests, and bug reports are all welcome.
 
 ## Ways to Contribute
@@ -33,12 +33,12 @@ A typical local validation flow is:
 ```bash
 cmake -S . -B build -G Ninja
 cmake --build build
-cmake --build build --target check-quar
+cmake --build build --target check-eter
 ```
 
 ## Git Hooks
 
-Quar includes native Git hooks under `.githooks/` so contributors can run the
+Eter includes native Git hooks under `.githooks/` so contributors can run the
 basic formatting, linting, build, and test checks automatically before commit
 and push operations.
 
@@ -69,7 +69,7 @@ The `pre-commit` hook currently checks:
 The `pre-push` hook currently checks:
 
 - `cmake --build build`
-- `cmake --build build --target check-quar`
+- `cmake --build build --target check-eter`
 
 Before enabling the hooks, make sure that:
 
@@ -79,7 +79,7 @@ Before enabling the hooks, make sure that:
 
 ## Coding Style
 
-Quar follows LLVM-style conventions where practical:
+Eter follows LLVM-style conventions where practical:
 
 - `clang-format` is based on LLVM style
 - `clang-tidy` is configured for LLVM/MLIR-oriented development
@@ -90,7 +90,7 @@ those changes are the main purpose of the review.
 
 ## Testing Expectations
 
-Behavioral changes should come with a regression test when possible. Quar’s test
+Behavioral changes should come with a regression test when possible. Eter’s test
 suite currently lives under `test/` and uses `lit` plus `FileCheck`.
 
 Typical smoke tests live in:
@@ -102,7 +102,7 @@ test/Smoke/*.smoke
 and use directives such as:
 
 ```text
-RUN: %quar ... | %FileCheck %s
+RUN: %eter ... | %FileCheck %s
 CHECK: ...
 ```
 

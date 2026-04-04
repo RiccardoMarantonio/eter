@@ -1,21 +1,21 @@
 <!--
-Part of the Quar Language project, under the Apache License v2.0 with LLVM
+Part of the Eter Language project, under the Apache License v2.0 with LLVM
 Exceptions. See /LICENSE for license information.
 SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 -->
 
-# Getting Started with Quar
+# Getting Started with Eter
 
 ## Overview
 
-Quar is an LLVM/MLIR-oriented language project. This guide explains how to get a
+Eter is an LLVM/MLIR-oriented language project. This guide explains how to get a
 fresh checkout configured, built, tested, and ready for local development.
 
 ## Requirements
 
 ### Software
 
-Before building Quar, make sure the following tools are available:
+Before building Eter, make sure the following tools are available:
 
 - **CMake 3.20+**
 - **Ninja** as the recommended generator
@@ -23,11 +23,11 @@ Before building Quar, make sure the following tools are available:
 - **LLVM/MLIR 22.x**
 - **`lit`** and **`FileCheck`** for the regression test suite
 
-Quar is configured to require **C++23** by default.
+Eter is configured to require **C++23** by default.
 
 ### Installing LLVM, MLIR, `lit`, and `FileCheck`
 
-Quar currently expects **LLVM/MLIR 22.x**. The setup differs slightly by
+Eter currently expects **LLVM/MLIR 22.x**. The setup differs slightly by
 platform.
 
 #### macOS
@@ -122,9 +122,9 @@ git clone https://github.com/quar-lang/quar
 cd quar
 ```
 
-## Getting the Source Code and Building Quar
+## Getting the Source Code and Building Eter
 
-Quar uses an out-of-tree CMake build. A typical development build looks like
+Eter uses an out-of-tree CMake build. A typical development build looks like
 this:
 
 ```bash
@@ -145,7 +145,7 @@ cmake -S . -B build -G Ninja \
   -DMLIR_DIR=/path/to/lib/cmake/mlir
 ```
 
-Quar currently expects **LLVM/MLIR 22.x**.
+Eter currently expects **LLVM/MLIR 22.x**.
 
 ## IDE and LSP Integration
 
@@ -165,11 +165,11 @@ machine-local rule, you can still add it to your `~/.gitignore_global`.
 
 ## Running the Test Suite
 
-Quar uses `lit` and `FileCheck` for fast regression and smoke tests. Run them
+Eter uses `lit` and `FileCheck` for fast regression and smoke tests. Run them
 with:
 
 ```bash
-cmake --build build --target check-quar
+cmake --build build --target check-eter
 ```
 
 ## Running the Driver
@@ -177,7 +177,7 @@ cmake --build build --target check-quar
 To run the current driver executable directly:
 
 ```bash
-./build/tools/quar/quar --version
+./build/tools/eter/eter --version
 ```
 
 This is also a simple smoke check that the build completed successfully.
@@ -186,9 +186,9 @@ This is also a simple smoke check that the build completed successfully.
 
 A few top-level directories are especially important during development:
 
-- `include/quar/` — public headers
+- `include/eter/` — public headers
 - `lib/` — core implementation libraries
-- `tools/` — executables such as `quar`
+- `tools/` — executables such as `eter`
 - `test/Smoke/` — `lit` / `FileCheck` smoke tests
 - `docs/` — project guides and design notes
 
@@ -211,5 +211,5 @@ search paths. These should be investigated if they turn into hard failures.
 
 ## Next Steps
 
-Once Quar builds cleanly, the next natural steps are to add more regression
+Once Eter builds cleanly, the next natural steps are to add more regression
 tests, grow the driver, and introduce the first MLIR dialects and passes.

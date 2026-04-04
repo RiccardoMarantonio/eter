@@ -30,7 +30,7 @@ jobs:
           sudo apt-get install -y ninja-build
           sudo apt-get install -y python3-setuptools
           sudo pip3 install lit --break-system-packages
-      - name: Build quar
+      - name: Build eter
         env:
           CC: ${{ matrix.compiler.CC }}
           CXX: ${{ matrix.compiler.CXX }}

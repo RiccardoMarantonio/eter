@@ -2,4 +2,9 @@
 # Exceptions. See /LICENSE for license information.
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
-add_subdirectory(eter)
+add_executable(eter eter.cpp)
+
+target_link_libraries(eter
+  PRIVATE
+    eter::Basic
+)

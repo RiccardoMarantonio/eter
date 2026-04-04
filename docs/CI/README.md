@@ -1,11 +1,11 @@
 # Continuous Integration
 
-This document describes the CI pipelines used by the Quar project.
+This document describes the CI pipelines used by the Eter project.
 
 ## Overview
 
 All CI workflows live in `.github/workflows/` and run on [GitHub Actions](https://docs.github.com/en/actions).
-Every workflow builds Quar in both **Debug** and **Release** configurations and
+Every workflow builds Eter in both **Debug** and **Release** configurations and
 runs the `lit` test suite.
 
 ### Triggers

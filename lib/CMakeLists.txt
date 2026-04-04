@@ -1,19 +1,19 @@
-# Part of the Quar Language project, under the Apache License v2.0 with LLVM
+# Part of the Eter Language project, under the Apache License v2.0 with LLVM
 # Exceptions. See /LICENSE for license information.
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
-add_library(QuarBasic
+add_library(EterBasic
   Basic/Version.cpp
 )
 
-add_library(quar::Basic ALIAS QuarBasic)
+add_library(eter::Basic ALIAS EterBasic)
 
-target_link_libraries(QuarBasic
+target_link_libraries(EterBasic
   PUBLIC
-    QuarProjectOptions
+    EterProjectOptions
 )
 
-target_include_directories(QuarBasic
+target_include_directories(EterBasic
   PUBLIC
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>

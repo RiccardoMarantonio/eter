@@ -1,2 +1,2 @@
-// RUN: %quar --version | %FileCheck %s
-// CHECK: quar 0.1.0
+// RUN: %eter --version | %FileCheck %s
+// CHECK: eter 0.1.0

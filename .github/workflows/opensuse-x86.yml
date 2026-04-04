@@ -37,7 +37,7 @@ jobs:
           mv "LLVM-${LLVM_VERSION}-Linux-X64" "${LLVM_PREFIX}"
           pip3 install lit --break-system-packages
           echo "${LLVM_PREFIX}/bin" >> "$GITHUB_PATH"
-      - name: Build quar
+      - name: Build eter
         env:
           CC: ${{ matrix.compiler.CC }}
           CXX: ${{ matrix.compiler.CXX }}

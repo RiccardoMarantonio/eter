@@ -1,6 +1,6 @@
 # Testing CI Locally
 
-This guide explains how to test Quar's CI workflows locally, simulating the GitHub Actions environment.
+This guide explains how to test Eter's CI workflows locally, simulating the GitHub Actions environment.
 
 ## 1. Prerequisites
 

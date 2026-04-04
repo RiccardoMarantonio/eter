@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Part of the Quar Language project, under the Apache License v2.0 with LLVM
+# Part of the Eter Language project, under the Apache License v2.0 with LLVM
 # Exceptions. See /LICENSE for license information.
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
@@ -18,7 +18,7 @@ if [[ ${#staged_files[@]} -eq 0 ]]; then
   exit 0
 fi
 
-echo "[quar] Running pre-commit checks..."
+echo "[eter] Running pre-commit checks..."
 
 git diff --cached --check
 
@@ -43,28 +43,28 @@ done
 
 if [[ ${#cpp_files[@]} -gt 0 ]]; then
   if ! command -v clang-format >/dev/null 2>&1; then
-    echo "[quar] error: clang-format is required for C/C++ formatting checks." >&2
+    echo "[eter] error: clang-format is required for C/C++ formatting checks." >&2
     exit 1
   fi
 
-  echo "[quar] Checking clang-format..."
+  echo "[eter] Checking clang-format..."
   clang-format --dry-run --Werror "${cpp_files[@]}"
 fi
 
 if [[ ${#source_files[@]} -gt 0 ]]; then
   if ! command -v clang-tidy >/dev/null 2>&1; then
-    echo "[quar] error: clang-tidy is required for lint checks." >&2
+    echo "[eter] error: clang-tidy is required for lint checks." >&2
     exit 1
   fi
 
   if [[ ! -f build/compile_commands.json ]]; then
-    echo "[quar] error: build/compile_commands.json was not found." >&2
-    echo "[quar] Run: cmake -S . -B build -G Ninja" >&2
+    echo "[eter] error: build/compile_commands.json was not found." >&2
+    echo "[eter] Run: cmake -S . -B build -G Ninja" >&2
     exit 1
   fi
 
-  echo "[quar] Checking clang-tidy..."
+  echo "[eter] Checking clang-tidy..."
   clang-tidy -p build "${source_files[@]}"
 fi
 
-echo "[quar] All pre-commit checks passed."
+echo "[eter] All pre-commit checks passed."

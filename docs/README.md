@@ -1,12 +1,12 @@
-# Quar Documentation
+# Eter Documentation
 
 This directory holds the main project guides and supporting design notes.
 
 ## Guides
 
-- [Getting Started with Quar](GETTING_STARTED.md)
-- [Contributing to Quar](CONTRIBUTING.md)
-- [Project Motivation](MOTIVATION.md) — Technical background and rationale for Quar's design and technology choices.
+- [Getting Started with Eter](GETTING_STARTED.md)
+- [Contributing to Eter](CONTRIBUTING.md)
+- [Project Motivation](MOTIVATION.md) — Technical background and rationale for Eter's design and technology choices.
 
 ## Development Areas
 
