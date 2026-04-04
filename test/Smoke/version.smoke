@@ -1,0 +1,2 @@
+// RUN: %quar --version | %FileCheck %s
+// CHECK: quar 0.1.0

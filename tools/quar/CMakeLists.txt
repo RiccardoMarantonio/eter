@@ -2,6 +2,9 @@
 # Exceptions. See /LICENSE for license information.
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
----
-BasedOnStyle: LLVM
-LineEnding: LF
+add_executable(quar quar.cpp)
+
+target_link_libraries(quar
+  PRIVATE
+    quar::Basic
+)

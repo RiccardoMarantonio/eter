@@ -1,0 +1,9 @@
+# Part of the Quar Language project, under the Apache License v2.0 with LLVM
+# Exceptions. See /LICENSE for license information.
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+
+config.quar_obj_root = r"@PROJECT_BINARY_DIR@"
+config.quar_executable = r"@PROJECT_BINARY_DIR@/tools/quar/quar"
+config.filecheck_executable = r"@FILECHECK_EXECUTABLE@"
+
+lit_config.load_config(config, r"@CMAKE_CURRENT_SOURCE_DIR@/lit.cfg.py")
