@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pacman -Sy --needed --noconfirm \
-            ca-certificates cmake ninja gcc \
+            ca-certificates cmake ninja gcc llvm \
             python python-pip python-setuptools \
             wget diffutils xz
           wget -nv --tries=5 --waitretry=5 --timeout=30 \
@@ -43,6 +43,11 @@ jobs:
           export PATH="${LLVM_PREFIX}/bin:${PATH}"
           LLVM_CMAKE_DIR="${LLVM_PREFIX}/lib/cmake/llvm"
           MLIR_CMAKE_DIR="${LLVM_PREFIX}/lib/cmake/mlir"
+          echo "PATH=${PATH}"
+          echo "ls ${LLVM_PREFIX}/bin | grep -i filecheck"
+          ls -la "${LLVM_PREFIX}/bin" | grep -i filecheck || true
+          echo "command -v FileCheck || command -v FileCheck-22"
+          command -v FileCheck || command -v FileCheck-22 || true
           FILECHECK_PATH="$(command -v FileCheck || command -v FileCheck-22 || true)"
           if [ -n "${FILECHECK_PATH}" ]; then
             LLVM_TOOLS_BIN_DIR="$(dirname "${FILECHECK_PATH}")"
